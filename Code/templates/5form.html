@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Title{% endblock %} {% block content
+%}
+<form action="/5" method="POST">
+	<div class="mt-2 text-xl font-bold text-gray-700 dark:text-white">
+		Retrieve all passengers of a train
+		</div>
+  <div class="grid gap-6 mb-6 md: p-4">
+    <div class="mb-6">
+      <label for="selected-train" class="label-primary text-gray-600">
+        Select a train</label
+      >
+      <select name="selected-train" id="selected-train" class="input-primary" required>
+        {% for train in trains %}
+        <option value="{{ train[0] }}">{{ train[0] }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="submit-primary">Submit</button>
+  </div>
+</form>
+{% endblock %}

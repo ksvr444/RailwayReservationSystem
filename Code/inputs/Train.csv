@@ -1,0 +1,37 @@
+Train Number, Train Name Premium Fair, General Fair, Source Station, Destination Station, Available on
+001, Orient Express , 800, 600, Paris, Istanbul, Weekdays
+002, Flying Scotsman, 4000, 3500, Edinburgh, London, (Friday, Saturday, Sunday)
+003, Golden Arrow , 980, 860, Victoria, Dover, (Monday, Tuesday, Wednesday)
+004, Golden Chariot, 4300, 3800, Bangalore, Goa, (Saturday, Sunday)
+005, Maharaja Express, 5980, 4510, Delhi, Mumbai, (Wednesday, Thursday, Friday)
+
+
+
+insert into Train(number, name, premium_fare, general_fare, source, destination)
+values
+('001', 'Orient Express' , 800, 600, 'Paris', 'Istanbul'),
+('002', 'Flying Scotsman', 4000, 3500, 'Edinburgh', 'London'),
+('003', 'Golden Arrow' , 980, 860, 'Victoria', 'Dover'),
+('004', 'Golden Chariot', 4300, 3800, 'Bangalore', 'Goa'),
+('005', 'Maharaja Express', 5980, 4510, 'Delhi', 'Mumbai');
+
+
+INSERT INTO Availability
+VALUES ('001', 'MONDAY'),
+	('001', 'TUESDAY'),
+    ('001', 'WEDNESDAY'),
+	('001', 'THURSDAY'),
+    ('001', 'FRIDAY'),
+    ('002', 'FRIDAY'),
+    ('002', 'SUNDAY'),
+    ('002', 'SATURDAY'),
+	('003', 'MONDAY'),
+	('003', 'TUESDAY'),
+    ('003', 'WEDNESDAY'),
+    ('004', 'SUNDAY'),
+    ('004', 'SATURDAY'),
+    ('005', 'THURSDAY'),
+    ('005', 'WEDNESDAY'),
+	('005', 'FRIDAY');
+
+

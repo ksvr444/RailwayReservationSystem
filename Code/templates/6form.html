@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{% block title %}Title{% endblock %}
+{% block content %}
+
+<form action="/6" method="POST">
+	<div class="mt-2 text-xl font-bold text-gray-700 dark:text-white">
+		Cancelling ticket to get waiting list person confirmed
+		</div>
+    <div class="grid gap-6 mb-6 md: p-4">
+       <div class="mb-6">
+            <label for="ssn" class="label-primary">
+                Passenger_ssn</label>
+            <input type="text" id="ssn" name="ssn"
+                class="input-primary"
+                placeholder="Enter ssn" required>
+
+        </div>
+		<div class="mb-6">
+           <label for="train-num" class="label-primary">
+                Train number</label>
+            <input type="text" id="train-num" name="train-num"
+                class="input-primary"
+                placeholder="Enter train number" required>
+
+        </div>
+       
+
+        <button type="submit" class="submit-primary">Submit</button>
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}1Form{% endblock %}
+{% block content %}
+
+<form action="/1" method="POST">
+	<div class="mt-2 text-xl font-bold text-gray-700 dark:text-white">
+		Retrieve all trains user booked to
+		</div>
+    <div class="grid gap-6 mb-6 md: p-4">
+        <div class="mb-6">
+            <label for="firstname" class="label-primary">
+                Firstname</label>
+            <input type="text" id="firstname" name="firstname"
+                class="input-primary"
+                placeholder="Enter First name" required>
+
+        </div>
+        <div class="mb-6">
+            <label for="lastname" class="label-primary">
+                Lastname</label>
+            <input type="text" id="lastname" name="lastname"
+                class="input-primary"
+                placeholder="Enter Last name" required>
+        </div>
+
+        <button type="submit"
+            class="submit-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}

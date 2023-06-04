@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/output.css') }}" />
+</head>
+
+
+</html>
+
+
+{% extends "base.html" %}
+{% block title %}Title{% endblock %}
+{% block content %}
+
+
+<div class=" text-white">
+
+    {% for key,dict_item in routes %}
+
+
+    <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div class="flex items-center justify-between">
+
+            <a class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500"
+                tabindex="0" role="button"> {{ key +1 }} </a>
+        </div>
+
+        <div class="mt-2">
+            <a href="{{ dict_item['url'] }}"
+                class="text-xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline"
+                tabindex="0" role="link">{{dict_item["Header"]}}</a>
+            <p class="mt-2 text-gray-600 dark:text-gray-300"> {{ dict_item["Description"] }} </p>
+        </div>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
